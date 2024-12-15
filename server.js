@@ -231,8 +231,8 @@ const getOrCreateColumnForDate = async (client, classSheet, date) => {
   return headers; // Return updated headers array
 };
 
-// Start Server
-const PORT = 5000;
+// Start server
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
